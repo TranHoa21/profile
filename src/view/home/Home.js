@@ -19,8 +19,23 @@ const Home = () => {
         setShowMission(!showMission);
     };
     const isMobile = useMediaQuery({ maxWidth: 768 });
+    const [currency, setCurrency] = useState('USD');
+    const [conversionRates, setConversionRates] = useState({
+        USD: 1,
+        VND: 24000,
+        EUR: 0.9,
+    });
 
-    return (
+    const pricing = {
+        basic: 250,
+        medium: 625,
+        vip: 1250,
+    };
+
+    const convertPrice = (price) => {
+        const convertedPrice = price * conversionRates[currency];
+        return convertedPrice.toLocaleString("en-US"); // Thêm dấu phân cách hàng nghìn và bỏ .00
+    }; return (
         <div div className="all-home">
             <div className="home-container">
                 <h1 className="title-home">Welcome to Tran Hoa's Web Design</h1>
@@ -229,26 +244,21 @@ const Home = () => {
                         className="slider"
                     >
                         <SwiperSlide className="slider-item">
-                            <img className="silder-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716527024/screencapture-serenity-adventures-demo-vercel-app_t4ua6n.png" />
+                            <img className="silder-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1735822766/screencapture-localhost-3000-customer-2025-01-02-19_46_47_wnkdja.png" />
                         </SwiperSlide>
                         <SwiperSlide className="slider-item">
                             <img className="silder-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716652644/screencapture-localhost-3000-2024-05-25-22_56_33_os9csk.png" />
                         </SwiperSlide>
                         <SwiperSlide className="slider-item">
-                            <img className="silder-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716527024/screencapture-serenity-adventures-demo-vercel-app_t4ua6n.png" />
+                            <img className="silder-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1735821583/juno-page1_x8nawz.png" />
                         </SwiperSlide>
                         <SwiperSlide className="slider-item">
-                            <img className="silder-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716527024/screencapture-serenity-adventures-demo-vercel-app_t4ua6n.png" />
+                            <img className="silder-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1735823216/screencapture-localhost-3000-2025-01-02-20_06_23_pj0r4a.png" />
                         </SwiperSlide>
                         <SwiperSlide className="slider-item">
-                            <img className="silder-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716527024/screencapture-serenity-adventures-demo-vercel-app_t4ua6n.png" />
+                            <img className="silder-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1735823924/screencapture-localhost-3000-2025-01-02-20_18_07_wunozd.png" />
                         </SwiperSlide>
-                        <SwiperSlide className="slider-item">
-                            <img className="silder-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716527024/screencapture-serenity-adventures-demo-vercel-app_t4ua6n.png" />
-                        </SwiperSlide>
-                        <SwiperSlide className="slider-item">
-                            <img className="silder-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716527024/screencapture-serenity-adventures-demo-vercel-app_t4ua6n.png" />
-                        </SwiperSlide>
+
                     </Swiper>
                 </div>
             </div>
@@ -302,7 +312,7 @@ const Home = () => {
                             <img className="feedback-client-content-item-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716538419/chat_5961257_s6iur5.png" />
                             <div className="feedback-client-content-item-data">"Tran Hoa's expertise in website design and development is unparalleled. He provided us with a customized solution that exceeded our expectations and helped us achieve our digital goals."</div>
                             <div className="feedback-client-box-av-name">
-                                <img className="feedback-client-box-av-name-avatar" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1712579061/learn_nodejs/qmuvd6fjkpjuix2o4vw3.jpg" />
+                                <img className="feedback-client-box-av-name-avatar" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728452788/portrait-young-man-yellow-scene_fhk3gp.jpg" />
                                 <p className="feedback-client-box-av-name-username">John Smith</p>
                             </div>
                         </div>
@@ -313,7 +323,7 @@ const Home = () => {
                             <div className="feedback-client-content-item-data-active">
                                 "Tran Hoa's performance optimization skills helped us improve our website speed and load times, enhancing the user experience and reducing bounce rates. Highly recommended for top-tier performance optimization services."</div>
                             <div className="feedback-client-box-av-name-active">
-                                <img className="feedback-client-box-av-name-avatar-active" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1712579061/learn_nodejs/qmuvd6fjkpjuix2o4vw3.jpg" />
+                                <img className="feedback-client-box-av-name-avatar-active" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728452784/front-view-angry-model_ugk9pm.jpg" />
                                 <p className="feedback-client-box-av-name-username-active">Ginger Jane</p>
                             </div>
                         </div>
@@ -325,7 +335,7 @@ const Home = () => {
                             <img className="feedback-client-content-item-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716538419/chat_5961257_s6iur5.png" />
                             <div className="feedback-client-content-item-data">"Tran Hoa's website SEO expertise helped us rank higher on Google, driving traffic and improving visibility. His professionalism and reliability make him a go-to for all our digital needs."</div>
                             <div className="feedback-client-box-av-name">
-                                <img className="feedback-client-box-av-name-avatar" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1712579061/learn_nodejs/qmuvd6fjkpjuix2o4vw3.jpg" />
+                                <img className="feedback-client-box-av-name-avatar" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728452785/portrait-smiling-blonde-woman_gufmzp.jpg" />
                                 <p className="feedback-client-box-av-name-username">Tarissa Kith</p>
                             </div>
                         </div>
@@ -335,7 +345,7 @@ const Home = () => {
                             <img className="feedback-client-content-item-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716538419/chat_5961257_s6iur5.png" />
                             <div className="feedback-client-content-item-data">"Tran Hoa's e-commerce development services were excellent. He created an online store that was easy to use, visually appealing, and optimized for conversions, leading to a 40% increase in online sales. Highly recommend for top-tier e-commerce development services."</div>
                             <div className="feedback-client-box-av-name">
-                                <img className="feedback-client-box-av-name-avatar" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1712579061/learn_nodejs/qmuvd6fjkpjuix2o4vw3.jpg" />
+                                <img className="feedback-client-box-av-name-avatar" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728452784/business-finance-employment-female-successful-entrepreneurs-concept-smiling-professional-female-office-manager-ceo-e-commerce-company-looking-pleased-camera-white-background_fzbvun.jpg" />
                                 <p className="feedback-client-box-av-name-username">June Snow</p>
                             </div>
                         </div>
@@ -346,11 +356,23 @@ const Home = () => {
                 <h1 className="pricing-home-title">Pricing Packages</h1>
                 <p className="pricing-home-content">I offer customized pricing packages to suit the unique needs of each client, with a focus on quality, reliability, and affordability.</p>
                 <div className="price-list">
+                    <div>
+                        <label htmlFor="currency-selector">Choose Currency: </label>
+                        <select
+                            id="currency-selector"
+                            value={currency}
+                            onChange={(e) => setCurrency(e.target.value)}
+                        >
+                            <option value="USD">USD</option>
+                            <option value="VND">VND</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
                     <div className=" row pricing-table ">
                         <div className="pricing-column col-sm-4">
                             <div className="pricing-header hder-1">
                                 <h2 >Basic Package</h2>
-                                <h3 className="price">1.200$ - 1.500$</h3>
+                                <h3 className="price"> Starting from {`${convertPrice(pricing.basic)} ${currency}`}</h3>
                             </div>
                             <h5 style={{ paddingTop: '25px' }}> MODDUL WEBSITE</h5>
                             <table>
@@ -369,12 +391,12 @@ const Home = () => {
                                             <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716542990/green-tick_dq8x0h.png" /> Category  </td>
                                         <td style={{ paddingLeft: '5px' }}></td>
                                         <td>
-                                            <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716542990/green-tick_dq8x0h.png" /> Page Admin
+                                            <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716543224/close_1828666_nleh1i.png" /> Page Admin
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716542990/green-tick_dq8x0h.png" /> Blog </td>
+                                            <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716543224/close_1828666_nleh1i.png" /> Blog </td>
                                         <td style={{ paddingLeft: '28px' }}></td>
                                         <td>
                                             <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1716542990/green-tick_dq8x0h.png" /> Contact
@@ -404,7 +426,7 @@ const Home = () => {
                         <div className="pricing-column col-sm-4">
                             <div className="pricing-header hder-2">
                                 <h2 >Medium Package</h2>
-                                <h3 className="price">2.000$-2.300$</h3>
+                                <h3 className="price"> Starting from {`${convertPrice(pricing.medium)} ${currency}`}</h3>
                             </div>
                             <h5 style={{ paddingTop: '25px' }}> MODDUL WEBSITE</h5>
                             <table>
@@ -456,8 +478,8 @@ const Home = () => {
                         </div>
                         <div className="pricing-column col-sm-4">
                             <div className="pricing-header hder-3">
-                                <h2>Gói VIP</h2>
-                                <h2 className="price">Từ 12 triệu</h2>
+                                <h2>VIP Package</h2>
+                                <h2 className="price"> Starting from {`${convertPrice(pricing.vip)} ${currency}`}</h2>
                             </div>
                             <h5 style={{ paddingTop: '25px' }}> MODDUL WEBSITE</h5>
                             <table>
@@ -507,6 +529,63 @@ const Home = () => {
                             </ul>
                             <button className="btn">Get Started</button>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className="news-box">
+                <div className="news-box-title">
+                    <h5 className="news-title">News</h5>
+                    <div className="news-btn">
+                        <button className="previous"><img className="previous-icon"
+                            src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728934558/arrow-left_5082834_uup8uq.png" /></button>
+                        <button className="next"><img className="next-icon"
+                            src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728934552/arrow-right_5082848_itat8z.png" /></button>
+                    </div>
+                </div>
+                <div className="row news">
+                    <div className="post-box col-sm-3 col-md-3">
+                        <img className="post-image"
+                            src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728408006/html_le8svd.png" />
+                        <h5 className="post-title">LG ra mắt loạt tv oled 4k tích hợp hdr tại ces 2016</h5>
+                        <p className="post-date">08/01/2016</p>
+                        <p className="post-describe">LG vừa giới thiệu loạt TV OLED 4K mới tại triển lãm CES 2016, trong đó
+                            tiêu
+                            biểu là 2 mẫu TV LG OLED 77/65-inch 08 và 65/66-inch E6 có tích hợp tính năng HDR. Theo đó ,
+                            8
+                            mẫu TV OLED 2016 đều được tích hợp những...</p>
+                    </div>
+                    <div className="post-box col-sm-3 col-md-3">
+                        <img className="post-image"
+                            src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728408006/html_le8svd.png" />
+                        <h5 className="post-title">LG ra mắt loạt tv oled 4k tích hợp hdr tại ces 2016</h5>
+                        <p className="post-date">08/01/2016</p>
+                        <p className="post-describe">LG vừa giới thiệu loạt TV OLED 4K mới tại triển lãm CES 2016, trong đó
+                            tiêu
+                            biểu là 2 mẫu TV LG OLED 77/65-inch 08 và 65/66-inch E6 có tích hợp tính năng HDR. Theo đó ,
+                            8
+                            mẫu TV OLED 2016 đều được tích hợp những...</p>
+                    </div>
+                    <div className="post-box col-sm-3 col-md-3">
+                        <img className="post-image"
+                            src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728408006/html_le8svd.png" />
+                        <h5 className="post-title">LG ra mắt loạt tv oled 4k tích hợp hdr tại ces 2016</h5>
+                        <p className="post-date">08/01/2016</p>
+                        <p className="post-describe">LG vừa giới thiệu loạt TV OLED 4K mới tại triển lãm CES 2016, trong đó
+                            tiêu
+                            biểu là 2 mẫu TV LG OLED 77/65-inch 08 và 65/66-inch E6 có tích hợp tính năng HDR. Theo đó ,
+                            8
+                            mẫu TV OLED 2016 đều được tích hợp những...</p>
+                    </div>
+                    <div className="post-box col-sm-3 col-md-3">
+                        <img className="post-image"
+                            src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728408006/html_le8svd.png" />
+                        <h5 className="post-title">LG ra mắt loạt tv oled 4k tích hợp hdr tại ces 2016</h5>
+                        <p className="post-date">08/01/2016</p>
+                        <p className="post-describe">LG vừa giới thiệu loạt TV OLED 4K mới tại triển lãm CES 2016, trong đó
+                            tiêu
+                            biểu là 2 mẫu TV LG OLED 77/65-inch 08 và 65/66-inch E6 có tích hợp tính năng HDR. Theo đó ,
+                            8
+                            mẫu TV OLED 2016 đều được tích hợp những...</p>
                     </div>
                 </div>
             </div>

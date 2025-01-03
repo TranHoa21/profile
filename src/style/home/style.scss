@@ -673,3 +673,81 @@ $rating-color: #ffd700;
         
       }
 }
+
+.news-box {
+    width: 100%;
+    
+    .news-box-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(196, 196, 196, 0.418);
+  
+      .news-title {
+        margin: 0;
+        padding: 10px 20px;
+        border-bottom: 1px solid rgba(120, 202, 100, 1);
+      }
+  
+      .news-btn {
+        button {
+          background: none;
+          border: none;
+          cursor: pointer;
+  
+          .previous-icon,
+          .next-icon {
+            width: 20px; // Điều chỉnh kích thước biểu tượng
+            height: auto;
+          }
+        }
+      }
+    }
+  
+    .row.news {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap; // Đảm bảo bố cục linh hoạt trên các thiết bị khác nhau
+  
+      .post-box {
+        padding: 30px ;
+        width: 100%; // Điều chỉnh kích thước theo thiết bị
+        @media (min-width: 576px) {
+          width: 50%; // Hai cột trên thiết bị nhỏ
+        }
+        @media (min-width: 768px) {
+          width: 25%; // Bốn cột trên thiết bị lớn
+        }
+  
+        .post-image {
+          width: 100%; // Đặt chiều rộng 100% cho hình ảnh
+          max-width: 100%; // Tối đa 60% của chiều rộng khối
+          margin: 0 auto; // Căn giữa hình ảnh
+          display: block;
+          object-fit: cover;
+        }
+  
+        .post-title {
+          text-transform: uppercase;
+          padding: 10px 0;
+          font-size: 1rem;
+          font-weight: bold;
+        }
+  
+        .post-date {
+          font-size: 0.9rem;
+          color: rgba(100, 100, 100, 0.8);
+        }
+  
+        .post-describe {
+          padding: 10px 0;
+          font-size: 0.9rem;
+          color: #333;
+        }
+      }
+    }
+  }
+  
+      
+
