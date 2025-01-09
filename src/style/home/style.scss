@@ -328,7 +328,7 @@ $rating-color: #ffd700;
             background-color: white;
             position:absolute;
             top:10%;
-            border-radius: 40%;
+            border-radius: 60px;
             left:10%;
             padding-top: 10px;
             .contact-home-title{
@@ -347,7 +347,7 @@ $rating-color: #ffd700;
             background-color: white;
             position:absolute;
             bottom:5%;
-            border-radius: 40%;
+            border-radius: 60px;
             right:0%;
             padding-top: 10px;
             .contact-home-title{
@@ -396,7 +396,7 @@ $rating-color: #ffd700;
             background-color: rgb(15, 147, 255);
             padding: 20px 10px;
             position:absolute;
-            border-radius: 30%;
+            border-radius: 40px;
             color: white;
             border: 1px solid rgb(15, 147, 255) ;
         }
@@ -673,7 +673,6 @@ $rating-color: #ffd700;
         
       }
 }
-
 .news-box {
     width: 100%;
     
@@ -748,6 +747,471 @@ $rating-color: #ffd700;
       }
     }
   }
+  @media (max-width: 768px) {
+    .home-container {
+        height: 500px; // Giảm chiều cao cho màn hình nhỏ
+        .title-home {
+            font-size: 1.5rem; // Giảm kích thước chữ
+            padding-left: 15px; // Giảm padding
+        }
+        .image-bg {
+            height: 500px; // Giảm chiều cao hình ảnh
+        }
+    }
+
+    .home-data-core {
+        height: auto; // Tự động điều chỉnh chiều cao
+        .row-home-data-core {
+            flex-direction: column; // Chuyển sang chiều dọc
+            .home-data-item {
+                width: 80%; // Mở rộng chiều rộng cho từng mục
+                margin: 10px 0; // Thêm khoảng cách giữa các mục
+            }
+        }
+    }
+
+    .professional-container {
+        .professional-container-title {
+            .professional-title {
+                font-size: 2rem; // Giảm kích thước chữ
+            }
+        }
+        .professional-content {
+            height: auto; // Tự động điều chỉnh chiều cao
+            .professional-content-row {
+                flex-direction: column; // Chuyển sang chiều dọc
+                .professional-content {
+                    .image-professional {
+                        width: 100%; // Đặt chiều rộng hình ảnh 100%
+                        height: auto; // Đặt chiều cao tự động
+                    }
+                }
+            }
+        }
+    }
+
+    .expertise-container {
+        .expertise-title {
+            font-size: 2rem; // Giảm kích thước chữ
+            width: 100%; // Đặt chiều rộng 100%
+        }
+        .content {
+            padding: 10px; // Giảm padding
+            width: 100%; // Đặt chiều rộng 100%
+        }
+    }
+
+    .row.expertise-box2 {
+        .col-md-2.box2-item {
+            width: 90%; // Mở rộng chiều rộng cho từng mục
+            margin: 10px 0; // Thêm khoảng cách giữa các mục
+            height: auto; // Tự động điều chỉnh chiều cao
+        }
+    }
+}
+@media (max-width: 480px) {
+    .home-container {
+        position: relative;
+        height:400px;
+
+    .title-home {
+        font-size: 1.2rem; 
+        position: absolute; // Đặt vị trí tuyệt đối cho tiêu đề
+        padding-left: 10px;
+        top: 10%;
+        left: 10px; 
+        z-index: 10; 
+        font-size: 1rem;
+    }
+
+    .image-bg {
+        position: relative; // Đặt vị trí tương đối cho hình ảnh
+        height: 400px; // Giảm chiều cao hình ảnh
+        width: 100%; // Đảm bảo hình ảnh đầy đủ chiều rộng
+        object-fit: cover; // Đảm bảo hình ảnh phủ đầy
+    }
+    }
+
+    .home-data-core {
+        height: auto; // Tự động điều chỉnh chiều cao
+        .row-home-data-core {
+            flex-direction: column; // Chuyển sang chiều dọc
+            .home-data-item {
+                width: 90%; 
+                margin: 5px 0;
+                padding:5px 10px; 
+                .image-icon-data{
+                    width:24px;
+                    height:24px;
+                }
+                .item-data-home{
+                    .content-data-home{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .professional-container {
+        .professional-container-title {
+            .professional-title {
+                font-size: 1.5rem; 
+                text-align: center;
+            }
+        }
+        .professional-content {
+            height: auto; 
+            .professional-content-row {
+                flex-direction: column; // Chuyển sang chiều dọc
+                .professional-content {
+                    
+                    .image-professional {
+                        width: 100%; // Đặt chiều rộng hình ảnh 100%
+                        height: auto; // Đặt chiều cao tự động
+                    }
+                }
+            }
+        }
+    }
+
+    .expertise-container {
+        .expertise-box1{
+        display:block;
+        padding:10px;
+        margin:20px 0;
+            .expertise-title {
+                font-size: 1.5rem; 
+                width: 100%; 
+                font-weight:bold;
+                padding-top: 15px;
+            }
+            .content {
+                padding: 5px; 
+                width: 100%; 
+                p{
+                    margin:0;
+                }
+            }
+        }
+        .row.expertise-box2{
+            padding:0;
+            .col-md-2.box2-item.col-sm-6{
+                padding:15px;
+                width:48%;
+                margin:1%;
+                .box2-item-time{
+                    font-size: 10px;
+                }
+                .box2-item-cty{
+                    font-size: 12px;
+                }
+                .box2-item-content{
+                    font-size: 10px;
+                }
+                .box2-item-readmore{
+                    font-size: 10px;
+                }
+            }
+        }
+        
+    }
+
+    .row.expertise-box2 {
+        .col-md-2.box2-item {
+            width: 100%; // Mở rộng chiều rộng cho từng mục
+            margin: 10px 0; // Thêm khoảng cách giữa các mục
+            height: auto; // Tự động điều chỉnh chiều cao
+        }
+    }
+    .professional-website-container{
+        .professional-website-box{
+            .professional-website-box-title{
+                font-size: 1.5rem;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+        .row.professional-website-box{
+            .col-sm-5.professional-website-box-item.active{
+                padding:0;
+                width:48%;
+                margin:1%;
+                .website-box-item-data{
+                    padding: 15px;
+                    .professional-website-box-item-image{
+                        width:24px;
+                        height:24px;
+                        object-fit: cover;
+                    }
+                    .professional-website-box-item-title{
+                        font-size: 12px;
+                    }
+                    .professional-website-box-item-content{
+                        font-size: 10px;
+                        padding:0;
+
+                    }
+                    .professional-website-box-item-link{
+                        font-size: 12px;
+                    }
+                }
+            }
+            .col-sm-5.professional-website-box-item-no-active{
+                padding:0;
+                width:48%;
+                margin:1%;
+                .website-box-item-data-no-active{
+                    padding:15px;
+                    .professional-website-box-item-image-no-active{
+                        width:24px;
+                        height:24px;
+                        object-fit: cover;
+                    }
+                    .professional-website-box-item-title-no-active{
+                        font-size: 12px;
+                    }
+                    .professional-website-box-item-content-no-active{
+                        font-size: 10px;
+                        padding:0;
+                    }
+                    .professional-website-box-item-link-no-active{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .successful-projects-container{
+        .row.successful-projects-box{
+            margin-top: 40px;
+            .col-sm-5.successful-projects-item{
+                .successful-projects-item-title{
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+                .successful-projects-item-content{
+                    font-weight: 1rem;
+                    text-align: center;
+                }
+               
+            }
+        }
+    }
+    .row.contact-home-container{
+        .col-sm-5.contact-home-item{
+            .contact-home-image{
+                margin:0;
+                width:100%;
+                height:auto;
+                object-fit: cover;
+            }
+            .contact-home-box1{
+                width:100px;
+                height:max-content;
+                background-color: white;
+                position:absolute;
+                top:10%;
+                border-radius: 40px;
+                left:5%;
+                padding-top: 10px;
+                .contact-home-title{
+                    font-size: 12px;
+                }
+                .contact-home-year{
+                    font-size: 10px;
+                    margin-bottom: 5px;
+                }
+            }
+            .contact-home-box2{
+                width:100px;
+                height:max-content;
+                background-color: white;
+                position:absolute;
+                bottom:5%;
+                border-radius: 40px;
+                right:0%;
+                padding-top: 10px;
+                .contact-home-title{
+                    font-size: 12px;
+                }
+                .contact-home-year{
+                    font-size: 10px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        .col-sm-6.contact-home-item{
+            margin:0 0 10px 0;
+            height:max-content;
+            .contact-home-data{
+                margin:0;
+                border-radius: 10px;
+                .contact-home-data-title{
+                    font-size: 12px;
+                }
+                .contact-home-data-content{
+                    font-size: 10px;
+                }
+                .contact-home-data-item{
+                    .contact-home-data-image{
+                        width:20px;
+                        height:20px;
+                    }
+                    .contact-home-data-item-content{
+                    font-size: 10px;
+                    }
+                }
+            }
+            .contact-home-btn{
+                position:unset;
+                font-size: 10px;
+                margin:10px 0;
+                border-radius: 20px;
+            }
+        }
+    }
+    .feedback-client-container{
+        .row.feedback-client{
+            .col-sm-5.feedback-client-box{
+                .feedback-client-title{
+                    text-align: center;
+                    font-size: 1.5rem;
+                }
+                .col-sm-5.feedback-client-box{
+                    .feedback-client-content{
+                    text-align: center;
+                    font-size: 12px;
+                    }
+                }
+            }
+        }
+        .row.box1-feedback-client{
+            .col-sm-5.feedback-client-content-item{
+                .feedback-data{
+                    padding:15px;
+                    .feedback-client-content-item-image{
+                        width:24px;
+                        height:24px;
+                        object-fit: cover;
+                    }
+                    .feedback-client-content-item-data{
+                        font-size: 12px;
+                    }
+                    .feedback-client-box-av-name{
+                        .feedback-client-box-av-name-avatar{
+                            width:28px;
+                            height:28px;
+                            object-fit: cover;
+                        }
+                        .feedback-client-box-av-name-username{
+                        font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .col-sm-5.feedback-client-content-item-active{
+                .feedback-data-active{
+                    padding:15px;
+                    .feedback-client-content-item-image-active{
+                        width:24px;
+                        height:24px;
+                        object-fit: cover;
+                    }
+                    .feedback-client-content-item-data-active{
+                        font-size: 12px;
+                    }
+                    .feedback-client-box-av-name-active{
+                        .feedback-client-box-av-name-avatar-active{
+                            width:28px;
+                            height:28px;
+                            object-fit: cover;
+                        }
+                        .feedback-client-box-av-name-username-active{
+                        font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pricing-home-container{
+        .pricing-home-title{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .pricing-home-content{
+            margin:10px 0;
+            font-size: 12px;
+            width:100%;
+        }
+        .row.pricing-table{
+            margin: 10px 0;
+            .pricing-column.col-sm-4{
+                .pricing-header.hder-1{
+                    padding:10px;
+                    h2{
+                        font-size: 1.5rem;
+                    }
+                    .price{
+                        font-size: 1.3rem;
+                        margin:0;
+                    }
+                }
+                .pricing-header.hder-2{
+                    padding:10px;
+                    h2{
+                        font-size: 1.5rem;
+                    }
+                    .price{
+                        font-size: 1.3rem;
+                        margin:0;
+                    }
+                }
+                .pricing-header.hder-3{
+                    padding:10px;
+                    h2{
+                        font-size: 1.5rem;
+                    }
+                    .price{
+                        font-size: 1.3rem;
+                        margin:0;
+                    }
+                }
+                h5{
+                    font-size: 13px;
+                }
+                table{
+                    tbody{
+                        tr{
+                            td{
+                                font-size: 10px;
+                                img{
+                                    width:18px;
+                                    height:18px;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+                .pricing-features{
+                    li{
+                        font-size: 10px;
+                        img{
+                            width:18px;
+                            height:18px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .btn{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
   
       
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../style/home/style.scss";
+import "../../../style/home/style.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';

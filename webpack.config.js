@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     module: {
         rules: [
@@ -7,7 +9,7 @@ module.exports = {
                     'style-loader',
                     'css-loader',
                     {
-                        loader: 'postcss-loader',
+                        loader: 'sass-loader',
                         options: {
                             sourceMap: true,
                         },
@@ -19,7 +21,7 @@ module.exports = {
                         },
                     },
                     {
-                        loader: 'sass-loader',
+                        loader: 'postcss-loader',
                         options: {
                             sourceMap: true,
                         },
@@ -39,5 +41,11 @@ module.exports = {
                 ],
             },
         ],
+    },
+    resolve: {
+        fallback: {
+            http: require.resolve('stream-http'),
+            https: require.resolve('https-browserify'),
+        },
     },
 };

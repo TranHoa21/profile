@@ -1,4 +1,4 @@
-import '../../style/blog/style.scss'
+import '../../../style/blog/style.scss'
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from "react";
@@ -21,6 +21,7 @@ const Blog = () => {
                     <h4 className="blog-featured">Featured This Month</h4>
                     <div className="blog-box-item">
                         <div className='blog-data'>
+                            <img className="blog-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1733348019/closeup-shot-cute-elephant-walking-dry-grass-wilderness_1_ndt2gg.jpg" />
                             <p className='tag'>website</p>
                             <h3 className='post-title'>Secrets to Designing a Professional Website: Insights from Real-Life Projects</h3>
                             <div className="features-section">
@@ -40,6 +41,7 @@ const Blog = () => {
                             <p className="website-description">Discover the secrets to designing a professional website with insights from real-life projects. Learn expert tips and best practices to create a stunning and functional website that stands out.</p>
                         </div>
                         <div className='blog-data'>
+                            <img className="blog-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1733348019/closeup-shot-cute-elephant-walking-dry-grass-wilderness_1_ndt2gg.jpg" />
                             <p className='tag'>website</p>
                             <h3 className='post-title'>Secrets to Designing a Professional Website: Insights from Real-Life Projects</h3>
                             <div className="features-section">
@@ -64,6 +66,7 @@ const Blog = () => {
                     <h4 className="blog-featured">Populer Posted</h4>
                     <div className="article-container">
                         <div className='article-header'>
+                            <img className="blog-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1733348019/closeup-shot-cute-elephant-walking-dry-grass-wilderness_1_ndt2gg.jpg" />
                             <p className='website-category'>Website</p>
                             <h3 className='article-title'>How a Well-Designed Website Can Transform Your Business: Lessons from Real-Life Examples</h3>
                             <div className="article-meta">
@@ -78,6 +81,22 @@ const Blog = () => {
                             </div>
                         </div>
                         <div className='article-header'>
+                            <img className="blog-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1733348019/closeup-shot-cute-elephant-walking-dry-grass-wilderness_1_ndt2gg.jpg" />
+                            <p className='website-category'>Website</p>
+                            <h3 className='article-title'>How a Well-Designed Website Can Transform Your Business: Lessons from Real-Life Examples</h3>
+                            <div className="article-meta">
+                                <div className="author-info">
+                                    <img className="author-avatar" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1735918718/z6194646109179_99d6a9c4c3eb2e7b941d571d74bdd879_wd8r3s.jpg" alt="avatar" />
+                                    <p className="author-name">Hoa Tran</p>
+                                </div>
+                                <div className="author-info">
+                                    <img className="author-avatar" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1735917745/timer_766366_gisqwc.png" />
+                                    <p className="author-name">3 min. to read</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='article-header'>
+                            <img className="blog-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1733348019/closeup-shot-cute-elephant-walking-dry-grass-wilderness_1_ndt2gg.jpg" />
                             <p className='website-category'>Website</p>
                             <h3 className='article-title'>How a Well-Designed Website Can Transform Your Business: Lessons from Real-Life Examples</h3>
                             <div className="article-meta">
@@ -100,6 +119,7 @@ const Blog = () => {
                     <h3 className="blog-featured">Recently Posted</h3>
                     <div className="blog-box-item">
                         <div className='blog-data'>
+                            <img className="blog-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1733348019/closeup-shot-cute-elephant-walking-dry-grass-wilderness_1_ndt2gg.jpg" />
                             <p className='tag'>website</p>
                             <h3 className='post-title'>Secrets to Designing a Professional Website: Insights from Real-Life Projects</h3>
                             <div className="features-section">
@@ -119,6 +139,7 @@ const Blog = () => {
                             <p className="website-description">Discover the secrets to designing a professional website with insights from real-life projects. Learn expert tips and best practices to create a stunning and functional website that stands out.</p>
                         </div>
                         <div className='blog-data'>
+                            <img className="blog-image" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1733348019/closeup-shot-cute-elephant-walking-dry-grass-wilderness_1_ndt2gg.jpg" />
                             <p className='tag'>website</p>
                             <h3 className='post-title'>Secrets to Designing a Professional Website: Insights from Real-Life Projects</h3>
                             <div className="features-section">

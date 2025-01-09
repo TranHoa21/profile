@@ -1,4 +1,4 @@
-import '../../style/pricing/style.scss'
+import '../../../style/pricing/style.scss'
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from "react";

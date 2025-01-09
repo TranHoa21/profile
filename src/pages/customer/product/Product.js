@@ -1,4 +1,4 @@
-import '../../style/product/style.scss'
+import '../../../style/product/style.scss'
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
