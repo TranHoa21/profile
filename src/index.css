@@ -2,10 +2,11 @@
 
 body {
   margin: 0;
-  font-family:  'Kalam', cursive !important;
+  font-family: 'Kalam', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
